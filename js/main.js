@@ -77,8 +77,8 @@ function displayGraph(data, remainCustomers) {
   const yValues = amount;
   let sortedAmount = yValues.slice().sort((a, b) => a - b);
   let minAmount = sortedAmount[0] - 100;
-  let maxAmount = sortedAmount[sortedAmount.length - 1] + 100;
-
+  let maxAmount = sortedAmount.pop() + 100;
+  
   new Chart("myChart", {
     type: "line",
     data: {
